@@ -1,3 +1,5 @@
+# save as 1_generate_synthetic_data.py - Enhanced with 70+ skills and 50+ certifications
+
 import pandas as pd
 import numpy as np
 import random
@@ -11,6 +13,7 @@ company_tiers = {
     'coforge': 5, 'valuelabs': 5, 'happiest-minds': 5,
 }
 
+# Enhanced roles - 35+ different IT positions
 roles = [
     'Software Developer', 'Senior Developer', 'Tech Lead', 'QA Engineer',
     'Data Scientist', 'DevOps Engineer', 'Cloud Engineer', 'Business Analyst',
@@ -20,32 +23,92 @@ roles = [
     'Business Intelligence Analyst', 'Network Engineer', 'System Administrator',
     'Mobile App Developer', 'Blockchain Developer', 'Site Reliability Engineer',
     'Cybersecurity Specialist', 'Cloud Architect', 'Scrum Master', 'Technical Lead',
-    'Performance Engineer', 'Infrastructure Engineer'
+    'Performance Engineer', 'Infrastructure Engineer', 'Software Architect',
+    'Data Engineer', 'Platform Engineer', 'Release Manager', 'Quality Assurance Lead'
 ]
 
-locations = ['Bangalore', 'Hyderabad', 'Chennai', 'Mumbai', 'Pune', 'Delhi', 'Gurgaon']
+locations = ['Bangalore', 'Hyderabad', 'Chennai', 'Mumbai', 'Pune', 'Delhi', 'Gurgaon', 'Noida', 'Kolkata']
 
 education_levels = ['Bachelor', 'Master', 'PhD']
 
+# 50+ Certifications for 2025
 certifications = [
     'None',
-    'AWS Certified Solutions Architect', 'AWS Cloud Practitioner', 'Microsoft Certified: Azure Fundamentals',
-    'Google Professional Cloud Architect', 'Google Associate Cloud Engineer',
-    'Certified Information Systems Security Professional (CISSP)', 'Certified Scrum Master (CSM)',
-    'Project Management Professional (PMP)', 'Certified Ethical Hacker (CEH)',
-    'CompTIA Security+', 'ITIL Foundation', 'Cisco Certified Network Associate (CCNA)',
-    'Oracle MySQL Database Administration', 'IBM Data Science Professional Certificate',
-    'Salesforce Certified Administrator', 'Microsoft Data Analyst Associate',
+    'AWS Certified Solutions Architect - Associate',
+    'AWS Certified Solutions Architect - Professional', 
+    'AWS Certified Developer - Associate',
+    'AWS Certified SysOps Administrator - Associate',
+    'AWS Certified DevOps Engineer - Professional',
+    'AWS Certified Security - Specialty',
+    'AWS Certified Machine Learning - Specialty',
+    'AWS Certified Data Analytics - Specialty',
+    'AWS Cloud Practitioner',
+    'Microsoft Certified: Azure Fundamentals',
+    'Microsoft Certified: Azure Administrator Associate',
+    'Microsoft Certified: Azure Solutions Architect Expert',
+    'Microsoft Certified: Azure DevOps Engineer Expert',
+    'Microsoft Certified: Azure Security Engineer Associate',
+    'Microsoft Certified: Azure AI Engineer Associate',
+    'Microsoft Certified: Azure Data Scientist Associate',
+    'Microsoft Certified: Azure Data Engineer Associate',
+    'Google Cloud Professional Cloud Architect',
+    'Google Cloud Professional Data Engineer',
+    'Google Cloud Professional Machine Learning Engineer',
+    'Google Cloud Professional Security Engineer',
+    'Google Cloud Associate Cloud Engineer',
+    'Google Cloud Professional DevOps Engineer',
+    'Certified Information Systems Security Professional (CISSP)',
+    'Certified Information Security Manager (CISM)',
+    'Certified Information Systems Auditor (CISA)',
+    'Certified Ethical Hacker (CEH)',
+    'CompTIA Security+',
+    'CompTIA Network+',
+    'CompTIA A+',
+    'CompTIA Cloud+',
+    'CompTIA CySA+',
+    'Cisco Certified Network Associate (CCNA)',
+    'Cisco Certified Network Professional (CCNP)',
+    'Cisco Certified Internetwork Expert (CCIE)',
+    'Project Management Professional (PMP)',
+    'Certified Scrum Master (CSM)',
+    'Professional Scrum Master (PSM)',
+    'SAFe Agilist Certification',
+    'ITIL Foundation',
+    'ITIL Expert',
+    'Docker Certified Associate (DCA)',
+    'Certified Kubernetes Administrator (CKA)',
+    'Certified Kubernetes Application Developer (CKAD)',
+    'Certified Kubernetes Security Specialist (CKS)',
+    'TensorFlow Developer Certificate',
+    'Oracle Database Administrator Certified Professional',
+    'Oracle MySQL Database Administration',
+    'Salesforce Certified Administrator',
+    'Salesforce Certified Platform Developer',
+    'Certified Cloud Security Professional (CCSP)',
+    'Certificate of Cloud Security Knowledge (CCSK)',
+    'VMware Certified Professional (VCP)',
+    'Red Hat Certified Engineer (RHCE)',
+    'Certified Data Professional (CDP)'
 ]
 
+# 70+ Skills for 2025
 skills = [
-    'Cloud', 'AI', 'Security', 'Full Stack', 'Data Engineering', 'DevOps',
-    'Data Science', 'Big Data', 'Machine Learning', 'Deep Learning', 'NLP',
-    'Cybersecurity', 'AWS', 'Azure', 'Google Cloud', 'MLOps',
-    'Front-end Development', 'Back-end Development', 'Mobile Development',
-    'Blockchain', 'IoT', 'Database Management', 'QA Automation', 'Network Security',
-    'UX/UI Design', 'RPA', 'Technical Writing', 'API Development',
-    'Prompt Engineering', 'Edge Computing', 'AR/VR', 'Project Management', 'Agile/Scrum'
+    'Cloud Computing', 'Artificial Intelligence', 'Machine Learning', 'Deep Learning', 'Data Science',
+    'Cybersecurity', 'DevOps', 'Full Stack Development', 'Data Engineering', 'Big Data',
+    'Natural Language Processing', 'Computer Vision', 'MLOps', 'Cloud Security', 'AWS',
+    'Microsoft Azure', 'Google Cloud Platform', 'Kubernetes', 'Docker', 'Terraform',
+    'Ansible', 'Jenkins', 'Python', 'Java', 'JavaScript', 'TypeScript', 'React',
+    'Angular', 'Vue.js', 'Node.js', 'Spring Boot', 'Django', 'Flask', 'FastAPI',
+    'Microservices', 'REST APIs', 'GraphQL', 'Database Management', 'SQL', 'NoSQL',
+    'MongoDB', 'PostgreSQL', 'MySQL', 'Redis', 'ElasticSearch', 'Apache Kafka',
+    'Apache Spark', 'Hadoop', 'Tableau', 'Power BI', 'Data Visualization', 'Blockchain',
+    'Cryptocurrency', 'Smart Contracts', 'IoT', 'Edge Computing', 'Serverless Architecture',
+    'Lambda Functions', 'API Gateway', 'Message Queues', 'Event-Driven Architecture',
+    'CI/CD', 'Git', 'GitHub Actions', 'GitLab CI', 'Agile', 'Scrum', 'Kanban',
+    'Project Management', 'Technical Writing', 'Code Review', 'Test Automation',
+    'Unit Testing', 'Integration Testing', 'Performance Testing', 'Load Testing',
+    'Security Testing', 'Penetration Testing', 'Vulnerability Assessment', 'Network Security',
+    'Information Security', 'Identity Management', 'OAuth', 'SAML', 'Single Sign-On'
 ]
 
 data_rows = []
@@ -86,4 +149,8 @@ for _ in range(3000):  # generate 3000 samples
 
 df = pd.DataFrame(data_rows)
 df.to_csv('synthetic_salary_data.csv', index=False)
-print("✅ Synthetic dataset saved as 'synthetic_salary_data.csv'")
+print("✅ Enhanced synthetic dataset saved as 'synthetic_salary_data.csv'")
+print(f"📊 Generated {len(data_rows)} records with {len(skills)} skills and {len(certifications)} certifications")
+print(f"🎯 Skills Count: {len(skills)}")
+print(f"🎓 Certifications Count: {len(certifications)}")
+print(f"💼 Roles Count: {len(roles)}")
